@@ -1,12 +1,17 @@
 .characterEditor {
+  position: relative;
+  overflow-x: clip;
   padding-top: 128px;
   padding-bottom: 64px;
 }
 
 .maxWidthWrapper {
+  max-width: 1280px;
+  position: relative;
 }
 
 .header {
+  max-width: 65%;
   padding-bottom: 64px;
 }
 
@@ -24,7 +29,46 @@
 }
 
 .characterWrapper {
+  min-height: 500px;
+  position: absolute;
+  top: 20px;
+  right: -150px;
+  bottom: 0;
 }
 
-.controlColumn {
+.perspectiveDecoration {
+  height: 40%;
+  width: 100%;
+  position: fixed;
+  bottom: 0%;
+  background-color: #9898;
+}
+
+@media (min-width: 1280px) {
+  .controlColumn {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1279px) {
+  .controlColumn {
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    gap: 10px;
+  }
+
+  .perspectiveDecoration {
+    height: 20%;
+  }
+
+  .controlColumn::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .controlColumn {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
