@@ -30,10 +30,10 @@
 
 .characterWrapper {
   min-height: 500px;
-  position: absolute;
-  top: 20px;
-  right: -150px;
-  bottom: 0;
+  position: fixed;
+  top: 15%;
+  left: 60%;
+  bottom: 5%;
 }
 
 .perspectiveDecoration {

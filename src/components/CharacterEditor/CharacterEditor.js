@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../index.css';
 import { defaultSkinColor, defaultClothesColor } from '../../constants';
 import Character from '../Character';
@@ -16,12 +16,12 @@ import {
 import styles from './CharacterEditor.module.css';
 
 function App() {
-  const [body, setBody] = React.useState(0);
-  const [head, setHead] = React.useState(0);
-  const [face, setFace] = React.useState(0);
-  const [accessory, setAccessory] = React.useState(0);
-  const [skinColor, setSkinColor] = React.useState(defaultSkinColor);
-  const [clothesColor, setClothesColor] = React.useState(defaultClothesColor);
+  const [body, setBody] = useState(0);
+  const [head, setHead] = useState(0);
+  const [face, setFace] = useState(0);
+  const [accessory, setAccessory] = useState(0);
+  const [skinColor, setSkinColor] = useState(defaultSkinColor);
+  const [clothesColor, setClothesColor] = useState(defaultClothesColor);
 
   return (
     <main className={styles.characterEditor}>

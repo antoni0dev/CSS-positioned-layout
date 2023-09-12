@@ -1,4 +1,10 @@
 .buttonRow {
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
+
+  /* If we have a container that has padding, and we want to undo this padding -> usually the easiest way to do that is with negative margins */
+  margin-left: -22px;
+  margin-right: -22px;
+  margin-bottom: -22px;
+  padding: 24px;
 }
